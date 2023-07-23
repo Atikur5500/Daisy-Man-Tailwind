@@ -5,10 +5,246 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Daisy Man With Tailwind</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              'hero-image': 'url(./Images/yellow-bg.jpg)',
+            }
+          }
+        }
+      }
+    </script>
 </head>
 <body>
-    <h1>Explore Daisy UI</h1>
+    <!-- Header Section -->
+    <header>
+        <!-- Navbar -->
+        <nav>
+          <div class="navbar bg-slate-500 px-3 md:px-8">
+            <div class="flex-1">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost normal-case text-2xl md:text-3xl font-extrabold text-white">DaisyMAN</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-white">
+                <li><a>Home</a></li>
+                <li><a>Blog</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <a class="btn btn-sm md:btn-md normal-case  rounded-sm">Login</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Hero Section -->
+        <div class="hero min-h-[calc(100vh-68px)] bg-hero-image" >
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-extrabold">Welcome To DaisyMAN</h1>
+              <p class="mb-5">Your one-stop destination for all your fashion needs. At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <button class="btn md:btn-md normal-case  rounded-sm">Shop Now</button>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+      <!-- Card Section -->
+      <section class="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-14 py-1 my-10">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold">Huge Collection</h2>
+          <p class="text-xs mt-1 underline">Browse from a various collections</p>
+        </div>
+        <!-- Card Item -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+          <!-- Card 01 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="./Images/shoes.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 02 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="./Images/hoodies.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Hoodies!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 03 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="./Images/perfume.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Perfume!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm">Shop Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Easy Purchase Section -->
+      <section class="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-14 py-5 my-10">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="flex-1">
+              <h2 class="text-4xl font-bold">Easy Purchase</h2>
+              <p class="pt-5 sm:w-11/12">we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.Our mission is to provide you with a divers and trendy collection.</p>
+          </div>
+          <div class="flex-1 mt-5">
+            <img src="./Images/easy-purchase.avif" alt="">
+          </div>
+        </div>
+      </section>
+      <!-- Top Product Section -->
+      <section class="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-14 py-5 my-10">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold">Top Products</h2>
+          <p class="text-xs mt-1 underline">Browse from a various collections</p>
+        </div>
+        <!-- Products Card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10">
+          <!-- card 01 -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="./Images/black-leather-shoes-.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Formal Shoes!</h2>
+              <p>Our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm bg-slate-500 text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="./Images/elegant-businessman-shirt-wooden-desk-stack-generated-by-ai_188544-34678.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Casual Shirt!</h2>
+              <p>Our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm bg-slate-500 text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 03 -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="./Images/blue-yellow-t-shirt-.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">T-Shirt's!</h2>
+              <p>Our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm bg-slate-500 text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 03 -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="./Images/elegant-businessman-attire-hangs-modern-closet-generated-by-ai_188544-15312.avif"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">Formal Shirt!</h2>
+              <p>Our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn md:btn-md normal-case  rounded-sm bg-slate-500 text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 04 -->
+        </div>
+      </section>
+      <!-- FAQ Section -->
+      <section class="max-w-screen-xl mx-auto px-5 md:px-10 lg:px-14 py-5 my-10">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
+          <p class="text-xs mt-1 underline">Browse Your Questions</p>
+        </div>
+        <!-- Accordion -->
+        <div class="collapse collapse-plus bg-slate-200 mt-3 rounded-sm">
+          <input type="radio" name="my-accordion-3" checked="checked" /> 
+          <div class="collapse-title text-lg font-medium">
+           When I got discount?
+          </div>
+          <div class="collapse-content"> 
+            <p class="text-sm">You will never get discount</p>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-slate-200 mt-3 rounded-sm">
+          <input type="radio" name="my-accordion-3"/> 
+          <div class="collapse-title text-lg font-medium">
+           When I got Cashback Offer?
+          </div>
+          <div class="collapse-content"> 
+            <p class="text-sm">You will never get discount</p>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-slate-200 mt-3 rounded-sm">
+          <input type="radio" name="my-accordion-3"/> 
+          <div class="collapse-title text-lg font-medium">
+           If I buy your product every weak, I will get discount?
+          </div>
+          <div class="collapse-content"> 
+            <p class="text-sm">You will never get discount</p>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-slate-200 mt-3 rounded-sm">
+          <input type="radio" name="my-accordion-3"/> 
+          <div class="collapse-title text-lg font-medium">
+           Can you take order Online?
+          </div>
+          <div class="collapse-content"> 
+            <p class="text-sm">You will never get discount</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer grid grid-cols-2 md:grid-cols-3 py-10 bg-slate-400 text-white text-base-content px-4 lg:px-36">
+      <div>
+        <span class="footer-title">Services</span> 
+        <a class="link link-hover">Branding</a> 
+        <a class="link link-hover">Design</a> 
+        <a class="link link-hover">Marketing</a> 
+        <a class="link link-hover">Advertisement</a>
+      </div> 
+      <div>
+        <span class="footer-title">Company</span> 
+        <a class="link link-hover">About us</a> 
+        <a class="link link-hover">Contact</a> 
+        <a class="link link-hover">Jobs</a> 
+        <a class="link link-hover">Press kit</a>
+      </div> 
+      <div>
+        <span class="footer-title">Legal</span> 
+        <a class="link link-hover">Terms of use</a> 
+        <a class="link link-hover">Privacy policy</a> 
+        <a class="link link-hover">Cookie policy</a>
+        <a class="link link-hover">Advertisement</a>
+      </div>
+    </footer>
 
 
 
@@ -32,6 +268,6 @@
 
 
 
-    
+
 </body>
 </html>
